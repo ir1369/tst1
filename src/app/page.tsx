@@ -99,8 +99,8 @@ export default function Home() {
             </div>
             <nav className="hidden md:flex space-x-8 space-x-reverse">
               <a href="#courses" className="text-gray-700 hover:text-emerald-600 transition-colors">دوره‌ها</a>
-              <a href="#about" className="text-gray-700 hover:text-emerald-600 transition-colors">درباره ما</a>
-              <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors">تماس</a>
+              <Link href="/about" className="text-gray-700 hover:text-emerald-600 transition-colors">درباره ما</Link>
+              <Link href="/contact" className="text-gray-700 hover:text-emerald-600 transition-colors">تماس</Link>
             </nav>
             <div className="flex items-center space-x-4 space-x-reverse">
               <Link
@@ -341,7 +341,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">پشتیبانی</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors">راهنما</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">تماس با ما</a></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">تماس با ما</Link></li>
                 <li><a href="#" className="hover:text-white transition-colors">سوالات متداول</a></li>
               </ul>
             </div>
