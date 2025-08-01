@@ -297,6 +297,184 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Customer Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">نظرات دانشجویان ما</h2>
+            <p className="text-xl text-gray-600">آنچه دانشجویان درباره آکادمی دانش می‌گویند</p>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-600 mb-2">4.8</div>
+              <div className="flex justify-center mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <div className="text-gray-600">میانگین امتیاز</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-600 mb-2">15,000+</div>
+              <div className="text-gray-600">نظر مثبت</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-emerald-600 mb-2">98%</div>
+              <div className="text-gray-600">رضایت دانشجویان</div>
+            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "آکادمی دانش واقعاً زندگی حرفه‌ای من را تغییر داد. دوره React.js آن‌قدر جامع و عملی بود که توانستم بلافاصله پس از اتمام، شغل جدیدی پیدا کنم."
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
+                  alt="احمد رضایی"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">احمد رضایی</div>
+                  <div className="text-sm text-gray-600">توسعه‌دهنده فرانت‌اند</div>
+                  <div className="text-xs text-emerald-600">دوره: برنامه‌نویسی React.js</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "کیفیت آموزش و پشتیبانی مدرسان فوق‌العاده است. دوره طراحی UI/UX به من کمک کرد تا مهارت‌هایم را به سطح حرفه‌ای برسانم."
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face"
+                  alt="فاطمه احمدی"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">فاطمه احمدی</div>
+                  <div className="text-sm text-gray-600">طراح UI/UX</div>
+                  <div className="text-xs text-emerald-600">دوره: طراحی رابط کاربری</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "بهترین پلتفرم آموزش آنلاین که تا حالا استفاده کردم. محتوای به‌روز، تدریس عالی و قیمت مناسب. همه چیز عالی است!"
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face"
+                  alt="علی محمدی"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">علی محمدی</div>
+                  <div className="text-sm text-gray-600">بازاریاب دیجیتال</div>
+                  <div className="text-xs text-emerald-600">دوره: دیجیتال مارکتینگ</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 4 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "من که هیچ پیش‌زمینه‌ای در برنامه‌نویسی نداشتم، با دوره Python آکادمی دانش توانستم از صفر شروع کنم و الان کار می‌کنم."
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face"
+                  alt="مریم کریمی"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">مریم کریمی</div>
+                  <div className="text-sm text-gray-600">تحلیلگر داده</div>
+                  <div className="text-xs text-emerald-600">دوره: Python برای علم داده</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 5 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "پشتیبانی فوق‌العاده و امکان تعامل با مدرس. هر سوالی داشتم سریع جواب گرفتم. واقعاً احساس می‌کنم در یک کلاس حضوری هستم."
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face"
+                  alt="حسین نوری"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">حسین نوری</div>
+                  <div className="text-sm text-gray-600">توسعه‌دهنده موبایل</div>
+                  <div className="text-xs text-emerald-600">دوره: برنامه‌نویسی Flutter</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial 6 */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 mb-6 leading-relaxed">
+                "دوره‌های آکادمی دانش نه تنها آموزشی هستند بلکه الهام‌بخش هم هستند. مدرسان با تجربه و محتوای عملی واقعاً تفاوت می‌کند."
+              </blockquote>
+              <div className="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&h=50&fit=crop&crop=face"
+                  alt="زهرا رضایی"
+                  className="w-12 h-12 rounded-full object-cover ml-4"
+                />
+                <div>
+                  <div className="font-semibold text-gray-900">زهرا رضایی</div>
+                  <div className="text-sm text-gray-600">گرافیک دیزاینر</div>
+                  <div className="text-xs text-emerald-600">دوره: طراحی گرافیک</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -363,4 +541,4 @@ export default function Home() {
       </footer>
     </div>
   )
-} 
+}
