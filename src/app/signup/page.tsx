@@ -1,16 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Mail, Lock, Eye, EyeOff, User, Phone, BookOpen, Users, Award, Play } from "lucide-react"
 import Link from "next/link"
+import { useAuth } from "@/hooks/useAuth"
 
 export default function SignUpPage() {
+  const router = useRouter()
+  const { signup, user, loading } = useAuth()
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState("")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,18 +25,31 @@ export default function SignUpPage() {
     confirmPassword: "",
   })
 
+  // Redirect if already logged in
+  useEffect(() => {
+    if (!loading && user) {
+      router.push("/")
+    }
+  }, [user, loading, router])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError("")
     setIsLoading(true)
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    const result = await signup(formData)
     
-    console.log("Sign up attempt:", formData)
+    if (result.success) {
+      router.push("/")
+    } else {
+      setError(result.error || "خطا در ثبت نام")
+    }
+    
     setIsLoading(false)
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setError("") // Clear error when user starts typing
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -48,6 +66,9 @@ export default function SignUpPage() {
       alert('Google sign up is not configured. Please contact support.')
     }
   }
+
+  // Show loading spinner while checking auth state
+  if (loading) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600"></div></div>
 
   const benefits = [
     {
@@ -110,6 +131,12 @@ export default function SignUpPage() {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                {error}
+              </div>
+            )}
+
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
