@@ -99,6 +99,7 @@ export default function Home() {
             </div>
             <nav className="hidden md:flex space-x-8 space-x-reverse">
               <a href="#courses" className="text-gray-700 hover:text-emerald-600 transition-colors">دوره‌ها</a>
+              <Link href="/teachers" className="text-gray-700 hover:text-emerald-600 transition-colors">اساتید</Link>
               <Link href="/about" className="text-gray-700 hover:text-emerald-600 transition-colors">درباره ما</Link>
               <Link href="/contact" className="text-gray-700 hover:text-emerald-600 transition-colors">تماس</Link>
             </nav>
@@ -512,6 +513,16 @@ export default function Home() {
                 <li><a href="#" className="hover:text-white transition-colors">طراحی</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">بازاریابی</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">زبان‌های خارجی</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">آکادمی</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/teachers" className="hover:text-white transition-colors">اساتید</Link></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">درباره ما</Link></li>
+                <li><a href="#" className="hover:text-white transition-colors">وبلاگ</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">اخبار</a></li>
               </ul>
             </div>
             
